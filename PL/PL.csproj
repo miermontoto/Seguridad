@@ -44,7 +44,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Ayuda.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="CifradorCadenas.cs" />
+    <Compile Include="CifradorBytes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

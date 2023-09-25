@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace PL
 {
-    internal class Program
+    internal class CifradorBytes
     {
         static void Main(string[] args)
         {
@@ -31,7 +31,8 @@ namespace PL
                 0x38, 0x39, 0x3A, 0x3B, 0x3C, 0x3D, 0x3E, 0x3F
             };
 
-            var acsp = new AesCryptoServiceProvider();
+            var NombreFichero = "zz_TextoCifrado.bin";
+            var acsp = new AesManaged();
 
             Console.WriteLine("KeySize: " + acsp.KeySize);
             Console.WriteLine("BlockSize: " + acsp.BlockSize);
@@ -43,9 +44,9 @@ namespace PL
             // mediante comentarios, los valores que es posible asignar a estas propiedades
             // (KeySize: 128, 192, 256; Padding: None, PKCS7, Zeros, ANSIX923, ISO10126; Mode: CBC, CFB, CTS, ECB, OFB)
 
-            acsp.KeySize = 256;
+            acsp.KeySize = 192;
             acsp.Padding = PaddingMode.PKCS7;
-            acsp.Mode = CipherMode.CBC;
+            acsp.Mode = CipherMode.ECB;
 
             Console.WriteLine();
             Console.WriteLine("KeySize: " + acsp.KeySize);
@@ -81,7 +82,7 @@ namespace PL
             // 5) Flush y cerrar el flujo de datos.
             // 6) Liberar los recursos del objeto cifrador.
             // 7) Cerrar el FileStream.
-            FileStream fsCifrado = new FileStream("zz_TextoCifrado.bin", FileMode.Create);
+            FileStream fsCifrado = new FileStream(NombreFichero, FileMode.Create);
             ICryptoTransform cifrador = acsp.CreateEncryptor();
             CryptoStream cs = new CryptoStream(fsCifrado, cifrador, CryptoStreamMode.Write);
             cs.Write(TextoPlano, 0, TextoPlano.Length);
@@ -92,8 +93,8 @@ namespace PL
 
             Console.WriteLine();
             Console.WriteLine("Texto cifrado: ");
-            var TextoCifrado = new byte[64];
-            a.CargaBufer("zz_TextoCifrado.bin", TextoCifrado);
+            var TextoCifrado = new byte[a.BytesFichero(NombreFichero)];
+            a.CargaBufer(NombreFichero, TextoCifrado);
             a.WriteHex(TextoCifrado, TextoCifrado.Length);
 
             // Proceso de descifrado de un array de bytes
