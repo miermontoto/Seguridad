@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{D89EAD03-C779-4EF0-B86C-EC41768FCDAC}</ProjectGuid>
+    <ProjectGuid>{D1A57958-9FB2-40A5-8E8D-E994A7C47B42}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Práctica4</RootNamespace>
-    <AssemblyName>Práctica4</AssemblyName>
+    <RootNamespace>DescifrarRSA</RootNamespace>
+    <AssemblyName>DescifrarRSA</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Ayuda.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
