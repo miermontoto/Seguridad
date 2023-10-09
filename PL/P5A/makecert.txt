@@ -1,0 +1,5 @@
+AC: .\MakeCert.exe -n "CN=zmAC.as" -r -pe -cy authority -# 1 -len 2048 -a sha256 -sv "zmACas.pvk" "zmACas.cer"
+SER: .\MakeCert.exe -n "CN=zmSER.as" -pe -cy end -ic "zmACas.cer" -iv "zmACas.pvk" -sky Exchange -len 2048 -a sha256 -sv "zmSERas.pvk" "zmSERas.cer"
+USU: .\MakeCert.exe -n "CN=zmCLI.as" -pe -cy end -ic "zmACas.cer" -iv "zmACas.pvk" -sky Exchange -len 2048 -a sha256 -sv "zmCLIas.pvk" "zmCLIas.cer"
+
+
