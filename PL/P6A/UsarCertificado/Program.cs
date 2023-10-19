@@ -20,7 +20,7 @@ namespace UsarCertificado
             }
 
             // Fase 1. Acceso a un certificado del almacén de certificados
-            string NombreCert = "zpusu.as";
+            string NombreCert = "MIER MONTOTO, JUAN FRANCISCO (AUTENTICACIÓN)";
             X509Certificate2 Cert = ExtraeCertificado(NombreCert, StoreName.My, StoreLocation.CurrentUser);
 
             // Fase 2. Uso del certificado
@@ -39,12 +39,10 @@ namespace UsarCertificado
             }
 
             RSACryptoServiceProvider ProvRSA1 = (RSACryptoServiceProvider) Cert.PublicKey.Key;
-            VerParam(ProvRSA1, false);
+            //VerParam(ProvRSA1, false);
 
-            string ClavePriXML = Cert.PrivateKey.ToXmlString(true);
-            var ProvRSA2 = new RSACryptoServiceProvider();
-            ProvRSA2.FromXmlString(ClavePriXML);
-            VerParam(ProvRSA2, true);
+            var ProvRSA2 = (RSACryptoServiceProvider) Cert.PrivateKey;
+            //VerParam(ProvRSA2, true);
 
             if (ProvRSA2 == null)
             {
@@ -61,7 +59,7 @@ namespace UsarCertificado
             // Descifrar con la clave privada
             byte[] Descifrado = ProvRSA2.Decrypt(Cifrado, false);
             Console.WriteLine("Descifrado con clave privada: " + BitConverter.ToString(Descifrado));
-
+            
             // Firmar con la clave privada
             byte[] Firma = ProvRSA2.SignData(Msg, CryptoConfig.MapNameToOID("SHA1"));
             Console.WriteLine("Firma con clave privada: " + BitConverter.ToString(Firma));
