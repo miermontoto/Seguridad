@@ -23,17 +23,48 @@ namespace ObtenerCertificado
             }
 
             var CertCliente = ExtraeCertificado("zmCLI.as", StoreName.My, StoreLocation.CurrentUser);
-            var CertAC = ExtraeCertificado("zmAC.as", StoreName.Root, StoreLocation.CurrentUser);
 
             byte[] MsgCmsFirmadoCod = FirmaCMS(Msg, CertCliente, false);
 
-            // Guardar Msg en el fichero "Fichero.dat"
-            Ayuda.GuardaBufer("Fichero.dat", Msg);
+            Console.WriteLine(VerificaCMS(Msg, MsgCmsFirmadoCod, false));
 
-            // Guardar MsgCmsFirmadoCod en el fichero "Fichero.p7b"
-            Ayuda.GuardaBufer("Fichero.p7b", MsgCmsFirmadoCod);
+            byte[] MsgCmsCifradoCod = CifraCMS(Msg, CertCliente);
+            Ayuda.WriteHex(MsgCmsCifradoCod, MsgCmsCifradoCod.Length);
 
+            byte[] MsgCmsDescifrado = DescifraCMS(MsgCmsCifradoCod);
+            Ayuda.WriteHex(MsgCmsDescifrado, MsgCmsDescifrado.Length);
 
+            // 7. Anidación
+            // --- EMISOR ---
+            byte[] MsgCmsFirmadoCod3 = FirmaCMS(Msg, CertCliente, false);
+            byte[] MsgCmsCifradoCod3 = CifraCMS(MsgCmsFirmadoCod3, CertCliente);
+
+            // --- RECEPTOR ---
+            byte[] MsgCmsDescifrado3 = DescifraCMS(MsgCmsCifradoCod3);
+            bool Verifica2 = VerificaCMS(MsgCmsDescifrado3, MsgCmsFirmadoCod3, false);
+
+            Console.WriteLine("Verifica2: " + Verifica2);
+        }
+
+        internal static byte[] DescifraCMS(byte[] CmsCifradoCodificado)
+        {
+            EnvelopedCms CmsCifrado = new EnvelopedCms();
+            CmsCifrado.Decode(CmsCifradoCodificado);
+
+            RecipientInfoCollection Recipientes = CmsCifrado.RecipientInfos;
+
+            if(Recipientes.Count != 1)
+            {
+                throw new CryptographicException("Número de recipientes incorrecto");
+            }
+
+            RecipientInfo Receptor = Recipientes[0];
+            Console.WriteLine("Tipo del receptor: " + Receptor.RecipientIdentifier.Type);   
+            Console.WriteLine("Valor del identificador del receptor: " + Receptor.RecipientIdentifier.Value);
+
+            CmsCifrado.Decrypt(Receptor);
+
+            return CmsCifrado.ContentInfo.Content;
         }
 
         internal static byte[] FirmaCMS(byte[] Msg, X509Certificate2 CertFirma, bool Desasociada)
@@ -48,6 +79,21 @@ namespace ObtenerCertificado
             CmsFirmado.ComputeSignature(FirmanteCMS);
 
             return CmsFirmado.Encode();
+        }
+
+        internal static byte[] CifraCMS(byte[] Msg, X509Certificate2 CertReceptor)
+        {
+            ContentInfo CI = new ContentInfo(Msg);
+            EnvelopedCms CmsCifrado = new EnvelopedCms(CI);
+            CmsCifrado.ContentEncryptionAlgorithm.Oid.Value = "2.16.840.1.101.3.4.1.42";
+
+            Console.WriteLine("Algoritmo: " + CmsCifrado.ContentEncryptionAlgorithm.Oid.FriendlyName);
+            Console.WriteLine("Oid: " + CmsCifrado.ContentEncryptionAlgorithm.Oid.Value);
+            Console.WriteLine("Longitud de la clave: " + CmsCifrado.ContentEncryptionAlgorithm.KeyLength);
+
+            CmsRecipient ReceptorCMS = new CmsRecipient(SubjectIdentifierType.IssuerAndSerialNumber, CertReceptor);
+            CmsCifrado.Encrypt(ReceptorCMS);
+            return CmsCifrado.Encode();
         }
 
         internal static bool VerificaCMS(byte[] Msg, byte[] CmsFirmadoCodificado, bool Desasociada)
