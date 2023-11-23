@@ -11,7 +11,7 @@ namespace PL
 {
     internal class CifradorCadenas
     {
-        static void Main(string[] args)
+        static void test(string[] args)
         {
             var a = new Ayuda();
 

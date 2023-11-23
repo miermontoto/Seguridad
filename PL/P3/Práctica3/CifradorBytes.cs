@@ -11,7 +11,7 @@ namespace PL
 {
     internal class CifradorBytes
     {
-        static void test(string[] args)
+        static void Main(string[] args)
         {
             var a = new Ayuda();
             var TamClave = 32;
