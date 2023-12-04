@@ -19,7 +19,7 @@ namespace VerificacionUsuarioContraseña
             UsuContra uc = new UsuContra();
             int resultado = uc.Verifica(nombre, contra);
 
-            switch(resultado)
+            switch (resultado)
             {
                 case 0:
                     Console.WriteLine("Usuario y contraseña correctos");
@@ -59,34 +59,41 @@ namespace VerificacionUsuarioContraseña
                 NombreInChar[i] = NombreIn[i];
             }
 
-            // 2. Buscar el NombreIn en el fichero de contraseñas, utilizando BinaryReader.
-            FileStream Fs = new FileStream("zz_Usuarios.bin", FileMode.Open, FileAccess.Read);
-            BinaryReader Br = new BinaryReader(Fs, Encoding.Unicode);
+            // 2. Buscar el NombreIn en el fichero de contraseñas, utilizando StreamReader.
+            FileStream Fs = new FileStream("zz_Usuarios.txt", FileMode.Open, FileAccess.Read);
+            StreamReader Sr = new StreamReader(Fs, Encoding.ASCII);
 
             bool Encontrado = false;
-            char[] NombreFich;
-            byte[] SaltFich;
-            byte[] ResuFich;
+            int NumCarSalt = (int) (4 * Math.Ceiling(LongitudSalt / 3.0));
+            int NumCarResuContra = (int) (4 * Math.Ceiling(LongitudResuContra / 3.0));
+            char[] NombreFich = new char[LongitudNombre];
+            char[] SaltFich = new char[NumCarSalt];
+            char[] ResuFich = new char[NumCarResuContra];
             do
             {
                 // Se lee un registro de un usuario (Nombre, Salt, ResuContra)
-                NombreFich = Br.ReadChars(LongitudNombre);
-                SaltFich = Br.ReadBytes(LongitudSalt);
-                ResuFich = Br.ReadBytes(LongitudResuContra);
+                Sr.Read(NombreFich, 0, LongitudNombre);
+
+                Sr.Read(SaltFich, 0, NumCarSalt);
+                Sr.Read(ResuFich, 0, NumCarResuContra);
+                Sr.ReadLine();
 
                 // Se compara el NombreIn con el NombreFich
                 Encontrado = NombreFich.SequenceEqual(NombreInChar);
             }
-            while(!Encontrado && Br.BaseStream.Position < Br.BaseStream.Length);
-            Br.Close();
+            while (!Encontrado && !Sr.EndOfStream);
+            Sr.Close();
             Fs.Close();
 
             if (!Encontrado) return 1;
 
-            Rfc2898DeriveBytes DeriveBytes = new Rfc2898DeriveBytes(ContraIn, SaltFich, 10000);
+            byte[] Salt = Convert.FromBase64CharArray(SaltFich, 0, SaltFich.Length);
+            byte[] ResuContra = Convert.FromBase64CharArray(ResuFich, 0, ResuFich.Length);
+
+            Rfc2898DeriveBytes DeriveBytes = new Rfc2898DeriveBytes(ContraIn, Salt, 10000);
             byte[] ResuContraIn = DeriveBytes.GetBytes(LongitudResuContra);
 
-            if (ResuContraIn.SequenceEqual(ResuFich)) return 0;
+            if (ResuContraIn.SequenceEqual(ResuContra)) return 0;
             else return 2;
         }
     }
