@@ -21,7 +21,7 @@ namespace GenerarFicheroContraseñas
             LU.Lista.Add(new User("David", "conD"));
             LU.Lista.Add(new User("Eduardo", "conE"));
             
-            LU.VerLista();
+            //LU.VerLista();
             LU.GuardaListaBin("zz_Usuarios.bin");
             LU.GuardaListaTxt("zz_Usuarios.txt");
             LU.GuardaListaXml("zz_Usuarios.xml");
@@ -86,6 +86,8 @@ namespace GenerarFicheroContraseñas
         // Se utiliza BinaryWriter con un Encoding para los caracteres de tipo Unicode
         public void GuardaListaBin(string NombreFich)
         {
+            Stopwatch Crono = new Stopwatch();
+            Crono.Start();
             FileStream Fs = new FileStream(NombreFich, FileMode.Create);
             BinaryWriter Bw = new BinaryWriter(Fs, Encoding.Unicode);
             foreach (User u in Lista)
@@ -96,6 +98,8 @@ namespace GenerarFicheroContraseñas
             }
             Bw.Close();
             Fs.Close();
+            Crono.Stop();
+            Console.WriteLine("Fichero BIN generado en " + Crono.ElapsedMilliseconds + "ms");
         }
 
         // Método que almacena los tres datos de cada usuario en el fichero indicado.
@@ -108,6 +112,8 @@ namespace GenerarFicheroContraseñas
         // Convert.ToBase64String.
         public void GuardaListaTxt(string NombreFich)
         {
+            Stopwatch Crono = new Stopwatch();
+            Crono.Start();
             FileStream Fs = new FileStream(NombreFich, FileMode.Create);
             StreamWriter Sw = new StreamWriter(Fs, Encoding.ASCII);
             foreach (User u in Lista)
@@ -118,10 +124,14 @@ namespace GenerarFicheroContraseñas
             }
             Sw.Close();
             Fs.Close();
+            Crono.Stop();
+            Console.WriteLine("Fichero TXT generado en " + Crono.ElapsedMilliseconds + "ms");
         }
 
         public void GuardaListaXml(string NombreFich)
         {
+            Stopwatch Crono = new Stopwatch();
+            Crono.Start();
             FileStream Fs = new FileStream(NombreFich, FileMode.Create);
             XmlWriterSettings Xws = new XmlWriterSettings();
             Xws.Indent = true;
@@ -131,9 +141,18 @@ namespace GenerarFicheroContraseñas
             Xw.WriteStartElement("Lista");
             foreach (User u in Lista)
             {
+                // debido a la manera de guardar caracteres en el array Nombre,
+                // hay que convertirlo a string de una manera muy especial para
+                // evitar que no se incluya el caracter nulo de relleno 0x00,
+                // que al parecer es incompatible con XML.
+                string nombre = "";
+                foreach (char c in u.Nombre)
+                {
+                    if (c == '\0') break;
+                    nombre += c;
+                }
                 Xw.WriteStartElement("Usuario");
-                Console.WriteLine(new string(u.Nombre));
-                Xw.WriteElementString("Nombre", new string(u.Nombre));
+                Xw.WriteElementString("Nombre", nombre);
                 Xw.WriteElementString("Salt", Convert.ToBase64String(u.Salt));
                 Xw.WriteElementString("ResuContra", Convert.ToBase64String(u.ResuContra));
                 Xw.WriteEndElement();
@@ -142,6 +161,8 @@ namespace GenerarFicheroContraseñas
             Xw.WriteEndDocument();
             Xw.Close();
             Fs.Close();
+            Crono.Stop();
+            Console.WriteLine("Fichero XML generado en " + Crono.ElapsedMilliseconds + "ms");
         }
     }
 }
