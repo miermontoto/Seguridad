@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<?xml-stylesheet href="file:///C:/Program Files (x86)/Nmap/nmap.xsl" type="text/xsl"?><nmaprun args="nmap -T4 -A -v ssh.mier.info" profile_name="Intense scan" scanner="nmap" start="1702122128" startstr="Sat Dec  9 12:42:08 2023" version="7.94" xmloutputversion="1.04"><scaninfo type="syn" protocol="tcp" numservices="1000" services="1,3-4,6-7,9,13,17,19-26,30,32-33,37,42-43,49,53,70,79-85,88-90,99-100,106,109-111,113,119,125,135,139,143-144,146,161,163,179,199,211-212,222,254-256,259,264,280,301,306,311,340,366,389,406-407,416-417,425,427,443-445,458,464-465,481,497,500,512-515,524,541,543-545,548,554-555,563,587,593,616-617,625,631,636,646,648,666-668,683,687,691,700,705,711,714,720,722,726,749,765,777,783,787,800-801,808,843,873,880,888,898,900-903,911-912,981,987,990,992-993,995,999-1002,1007,1009-1011,1021-1100,1102,1104-1108,1110-1114,1117,1119,1121-1124,1126,1130-1132,1137-1138,1141,1145,1147-1149,1151-1152,1154,1163-1166,1169,1174-1175,1183,1185-1187,1192,1198-1199,1201,1213,1216-1218,1233-1234,1236,1244,1247-1248,1259,1271-1272,1277,1287,1296,1300-1301,1309-1311,1322,1328,1334,1352,1417,1433-1434,1443,1455,1461,1494,1500-1501,1503,1521,1524,1533,1556,1580,1583,1594,1600,1641,1658,1666,1687-1688,1700,1717-1721,1723,1755,1761,1782-1783,1801,1805,1812,1839-1840,1862-1864,1875,1900,1914,1935,1947,1971-1972,1974,1984,1998-2010,2013,2020-2022,2030,2033-2035,2038,2040-2043,2045-2049,2065,2068,2099-2100,2103,2105-2107,2111,2119,2121,2126,2135,2144,2160-2161,2170,2179,2190-2191,2196,2200,2222,2251,2260,2288,2301,2323,2366,2381-2383,2393-2394,2399,2401,2492,2500,2522,2525,2557,2601-2602,2604-2605,2607-2608,2638,2701-2702,2710,2717-2718,2725,2800,2809,2811,2869,2875,2909-2910,2920,2967-2968,2998,3000-3001,3003,3005-3007,3011,3013,3017,3030-3031,3052,3071,3077,3128,3168,3211,3221,3260-3261,3268-3269,3283,3300-3301,3306,3322-3325,3333,3351,3367,3369-3372,3389-3390,3404,3476,3493,3517,3527,3546,3551,3580,3659,3689-3690,3703,3737,3766,3784,3800-3801,3809,3814,3826-3828,3851,3869,3871,3878,3880,3889,3905,3914,3918,3920,3945,3971,3986,3995,3998,4000-4006,4045,4111,4125-4126,4129,4224,4242,4279,4321,4343,4443-4446,4449,4550,4567,4662,4848,4899-4900,4998,5000-5004,5009,5030,5033,5050-5051,5054,5060-5061,5080,5087,5100-5102,5120,5190,5200,5214,5221-5222,5225-5226,5269,5280,5298,5357,5405,5414,5431-5432,5440,5500,5510,5544,5550,5555,5560,5566,5631,5633,5666,5678-5679,5718,5730,5800-5802,5810-5811,5815,5822,5825,5850,5859,5862,5877,5900-5904,5906-5907,5910-5911,5915,5922,5925,5950,5952,5959-5963,5987-5989,5998-6007,6009,6025,6059,6100-6101,6106,6112,6123,6129,6156,6346,6389,6502,6510,6543,6547,6565-6567,6580,6646,6666-6669,6689,6692,6699,6779,6788-6789,6792,6839,6881,6901,6969,7000-7002,7004,7007,7019,7025,7070,7100,7103,7106,7200-7201,7402,7435,7443,7496,7512,7625,7627,7676,7741,7777-7778,7800,7911,7920-7921,7937-7938,7999-8002,8007-8011,8021-8022,8031,8042,8045,8080-8090,8093,8099-8100,8180-8181,8192-8194,8200,8222,8254,8290-8292,8300,8333,8383,8400,8402,8443,8500,8600,8649,8651-8652,8654,8701,8800,8873,8888,8899,8994,9000-9003,9009-9011,9040,9050,9071,9080-9081,9090-9091,9099-9103,9110-9111,9200,9207,9220,9290,9415,9418,9485,9500,9502-9503,9535,9575,9593-9595,9618,9666,9876-9878,9898,9900,9917,9929,9943-9944,9968,9998-10004,10009-10010,10012,10024-10025,10082,10180,10215,10243,10566,10616-10617,10621,10626,10628-10629,10778,11110-11111,11967,12000,12174,12265,12345,13456,13722,13782-13783,14000,14238,14441-14442,15000,15002-15004,15660,15742,16000-16001,16012,16016,16018,16080,16113,16992-16993,17877,17988,18040,18101,18988,19101,19283,19315,19350,19780,19801,19842,20000,20005,20031,20221-20222,20828,21571,22939,23502,24444,24800,25734-25735,26214,27000,27352-27353,27355-27356,27715,28201,30000,30718,30951,31038,31337,32768-32785,33354,33899,34571-34573,35500,38292,40193,40911,41511,42510,44176,44442-44443,44501,45100,48080,49152-49161,49163,49165,49167,49175-49176,49400,49999-50003,50006,50300,50389,50500,50636,50800,51103,51493,52673,52822,52848,52869,54045,54328,55055-55056,55555,55600,56737-56738,57294,57797,58080,60020,60443,61532,61900,62078,63331,64623,64680,65000,65129,65389"></scaninfo><verbose level="1"></verbose><debugging level="0"></debugging><output type="interactive">Starting Nmap 7.94 ( https://nmap.org ) at 2023-12-09 12:42 Hora estándar romance
+NSE: Loaded 156 scripts for scanning.
+NSE: Script Pre-scanning.
+Initiating NSE at 12:42
+Completed NSE at 12:42, 0.00s elapsed
+Initiating NSE at 12:42
+Completed NSE at 12:42, 0.00s elapsed
+Initiating NSE at 12:42
+Completed NSE at 12:42, 0.00s elapsed
+Initiating Ping Scan at 12:42
+Scanning ssh.mier.info (90.175.129.23) [4 ports]
+Completed Ping Scan at 12:42, 0.01s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 12:42
+Completed Parallel DNS resolution of 1 host. at 12:42, 0.31s elapsed
+Initiating SYN Stealth Scan at 12:42
+Scanning ssh.mier.info (90.175.129.23) [1000 ports]
+Discovered open port 80/tcp on 90.175.129.23
+Discovered open port 443/tcp on 90.175.129.23
+Discovered open port 9090/tcp on 90.175.129.23
+Discovered open port 6969/tcp on 90.175.129.23
+Completed SYN Stealth Scan at 12:42, 1.47s elapsed (1000 total ports)
+Initiating Service scan at 12:42
+Scanning 4 services on ssh.mier.info (90.175.129.23)
+Completed Service scan at 12:44, 142.49s elapsed (4 services on 1 host)
+Initiating OS detection (try #1) against ssh.mier.info (90.175.129.23)
+Retrying OS detection (try #2) against ssh.mier.info (90.175.129.23)
+Initiating Traceroute at 12:44
+Completed Traceroute at 12:44, 0.43s elapsed
+NSE: Script scanning 90.175.129.23.
+Initiating NSE at 12:44
+Completed NSE at 12:45, 30.13s elapsed
+Initiating NSE at 12:45
+Completed NSE at 12:45, 2.72s elapsed
+Initiating NSE at 12:45
+Completed NSE at 12:45, 0.00s elapsed
+Nmap scan report for ssh.mier.info (90.175.129.23)
+Host is up (0.32s latency).
+rDNS record for 90.175.129.23: 23.pool90-175-129.dynamic.orange.es
+Not shown: 995 closed tcp ports (reset)
+PORT     STATE    SERVICE         VERSION
+80/tcp   open     http            nginx 1.24.0
+|_http-server-header: nginx/1.24.0
+|_http-title: 404 Not Found
+443/tcp  open     ssl/http        nginx 1.24.0
+|_http-server-header: nginx/1.24.0
+|_ssl-date: TLS randomness does not represent time
+| ssl-cert: Subject: commonName=dashboard.mier.info
+| Subject Alternative Name: DNS:dashboard.mier.info
+| Issuer: commonName=R3/organizationName=Let's Encrypt/countryName=US
+| Public Key type: ec
+| Public Key bits: 256
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2023-11-18T18:20:12
+| Not valid after:  2024-02-16T18:20:11
+| MD5:   1bb2:56ac:6beb:d37b:48a4:d250:ee51:80f5
+|_SHA-1: ee9a:91af:b5a4:5043:b11a:896c:5213:4392:0729:37e1
+| http-robots.txt: 1 disallowed entry 
+|_/
+| http-title: dashboard.mier.info
+|_Requested resource was /status/main
+|_http-favicon: Unknown favicon MD5: 5EA4B467D984433398E1037469F13214
+|_http-cors: GET POST OPTIONS
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+6969/tcp open     tcpwrapped
+8080/tcp filtered http-proxy
+9090/tcp open     ssl/zeus-admin?
+|_ssl-date: TLS randomness does not represent time
+| fingerprint-strings: 
+|   GetRequest, HTTPOptions: 
+|     HTTP/1.1 400 Bad request
+|     Content-Type: text/html; charset=utf8
+|     Transfer-Encoding: chunked
+|     X-DNS-Prefetch-Control: off
+|     Referrer-Policy: no-referrer
+|     X-Content-Type-Options: nosniff
+|     Cross-Origin-Resource-Policy: same-origin
+|     X-Frame-Options: sameorigin
+|     &lt;!DOCTYPE html&gt;
+|     &lt;html&gt;
+|     &lt;head&gt;
+|     &lt;title&gt;
+|     request
+|     &lt;/title&gt;
+|     &lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8"&gt;
+|     &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+|     &lt;style&gt;
+|     body {
+|     margin: 0;
+|     font-family: "RedHatDisplay", "Open Sans", Helvetica, Arial, sans-serif;
+|     font-size: 12px;
+|     line-height: 1.66666667;
+|     color: #333333;
+|     background-color: #f5f5f5;
+|     border: 0;
+|     vertical-align: middle;
+|_    font-weight: 300;
+| ssl-cert: Subject: commonName=ace/organizationName=6f02de4c585445cabace0c150a14a32b
+| Subject Alternative Name: IP Address:127.0.0.1, DNS:localhost
+| Issuer: commonName=ace/organizationName=6f02de4c585445cabace0c150a14a32b
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2023-04-26T15:59:33
+| Not valid after:  2024-05-25T15:59:33
+| MD5:   4f0c:0b11:3c8c:2853:55a7:7ce8:6192:a69a
+|_SHA-1: 01c6:8077:c433:5e6d:e88e:5daa:f231:5e3f:acda:0b67
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port9090-TCP:V=7.94%T=SSL%I=7%D=12/9%Time=657452CC%P=i686-pc-windows-wi
+SF:ndows%r(GetRequest,DB1,"HTTP/1\.1\x20400\x20Bad\x20request\r\nContent-T
+SF:ype:\x20text/html;\x20charset=utf8\r\nTransfer-Encoding:\x20chunked\r\n
+SF:X-DNS-Prefetch-Control:\x20off\r\nReferrer-Policy:\x20no-referrer\r\nX-
+SF:Content-Type-Options:\x20nosniff\r\nCross-Origin-Resource-Policy:\x20sa
+SF:me-origin\r\nX-Frame-Options:\x20sameorigin\r\n\r\n29\r\n&lt;!DOCTYPE\x20h
+SF:tml&gt;\n&lt;html&gt;\n&lt;head&gt;\n\x20\x20\x20\x20&lt;title&gt;\r\nb\r\nBad\x20request\r\
+SF:nc2c\r\n&lt;/title&gt;\n\x20\x20\x20\x20&lt;meta\x20http-equiv=\"Content-Type\"\
+SF:x20content=\"text/html;\x20charset=utf-8\"&gt;\n\x20\x20\x20\x20&lt;meta\x20n
+SF:ame=\"viewport\"\x20content=\"width=device-width,\x20initial-scale=1\.0
+SF:\"&gt;\n\x20\x20\x20\x20&lt;style&gt;\n\tbody\x20{\n\x20\x20\x20\x20\x20\x20\x20
+SF:\x20\x20\x20\x20\x20margin:\x200;\n\x20\x20\x20\x20\x20\x20\x20\x20\x20
+SF:\x20\x20\x20font-family:\x20\"RedHatDisplay\",\x20\"Open\x20Sans\",\x20
+SF:Helvetica,\x20Arial,\x20sans-serif;\n\x20\x20\x20\x20\x20\x20\x20\x20\x
+SF:20\x20\x20\x20font-size:\x2012px;\n\x20\x20\x20\x20\x20\x20\x20\x20\x20
+SF:\x20\x20\x20line-height:\x201\.66666667;\n\x20\x20\x20\x20\x20\x20\x20\
+SF:x20\x20\x20\x20\x20color:\x20#333333;\n\x20\x20\x20\x20\x20\x20\x20\x20
+SF:\x20\x20\x20\x20background-color:\x20#f5f5f5;\n\x20\x20\x20\x20\x20\x20
+SF:\x20\x20}\n\x20\x20\x20\x20\x20\x20\x20\x20img\x20{\n\x20\x20\x20\x20\x
+SF:20\x20\x20\x20\x20\x20\x20\x20border:\x200;\n\x20\x20\x20\x20\x20\x20\x
+SF:20\x20\x20\x20\x20\x20vertical-align:\x20middle;\n\x20\x20\x20\x20\x20\
+SF:x20\x20\x20}\n\x20\x20\x20\x20\x20\x20\x20\x20h1\x20{\n\x20\x20\x20\x20
+SF:\x20\x20\x20\x20\x20\x20\x20\x20font-weight:\x20300;\n\x20\x20\x20\x20\
+SF:x20\x20\x20\x20}\n\x20\x20\x20\x20\x20\x20\x20\x20p\x20")%r(HTTPOptions
+SF:,DB1,"HTTP/1\.1\x20400\x20Bad\x20request\r\nContent-Type:\x20text/html;
+SF:\x20charset=utf8\r\nTransfer-Encoding:\x20chunked\r\nX-DNS-Prefetch-Con
+SF:trol:\x20off\r\nReferrer-Policy:\x20no-referrer\r\nX-Content-Type-Optio
+SF:ns:\x20nosniff\r\nCross-Origin-Resource-Policy:\x20same-origin\r\nX-Fra
+SF:me-Options:\x20sameorigin\r\n\r\n29\r\n&lt;!DOCTYPE\x20html&gt;\n&lt;html&gt;\n&lt;hea
+SF:d&gt;\n\x20\x20\x20\x20&lt;title&gt;\r\nb\r\nBad\x20request\r\nc2c\r\n&lt;/title&gt;\n
+SF:\x20\x20\x20\x20&lt;meta\x20http-equiv=\"Content-Type\"\x20content=\"text/
+SF:html;\x20charset=utf-8\"&gt;\n\x20\x20\x20\x20&lt;meta\x20name=\"viewport\"\x
+SF:20content=\"width=device-width,\x20initial-scale=1\.0\"&gt;\n\x20\x20\x20\
+SF:x20&lt;style&gt;\n\tbody\x20{\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x
+SF:20margin:\x200;\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20font-f
+SF:amily:\x20\"RedHatDisplay\",\x20\"Open\x20Sans\",\x20Helvetica,\x20Aria
+SF:l,\x20sans-serif;\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20font
+SF:-size:\x2012px;\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20line-h
+SF:eight:\x201\.66666667;\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x2
+SF:0color:\x20#333333;\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20ba
+SF:ckground-color:\x20#f5f5f5;\n\x20\x20\x20\x20\x20\x20\x20\x20}\n\x20\x2
+SF:0\x20\x20\x20\x20\x20\x20img\x20{\n\x20\x20\x20\x20\x20\x20\x20\x20\x20
+SF:\x20\x20\x20border:\x200;\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20
+SF:\x20vertical-align:\x20middle;\n\x20\x20\x20\x20\x20\x20\x20\x20}\n\x20
+SF:\x20\x20\x20\x20\x20\x20\x20h1\x20{\n\x20\x20\x20\x20\x20\x20\x20\x20\x
+SF:20\x20\x20\x20font-weight:\x20300;\n\x20\x20\x20\x20\x20\x20\x20\x20}\n
+SF:\x20\x20\x20\x20\x20\x20\x20\x20p\x20");
+Aggressive OS guesses: Linux 5.0 - 5.4 (93%), Linux 5.1 (93%), Linux 2.6.32 - 3.13 (93%), Linux 2.6.39 (93%), Linux 2.6.22 - 2.6.36 (91%), Linux 3.10 - 4.11 (91%), Linux 3.10 (91%), Linux 2.6.32 (90%), Linux 3.2 - 4.9 (90%), Linux 4.15 - 5.8 (90%)
+No exact OS matches for host (test conditions non-ideal).
+Uptime guess: 8.568 days (since Thu Nov 30 23:07:07 2023)
+Network Distance: 1 hop
+TCP Sequence Prediction: Difficulty=259 (Good luck!)
+IP ID Sequence Generation: All zeros
+
+TRACEROUTE (using port 110/tcp)
+HOP RTT       ADDRESS
+1   424.00 ms 23.pool90-175-129.dynamic.orange.es (90.175.129.23)
+
+NSE: Script Post-scanning.
+Initiating NSE at 12:45
+Completed NSE at 12:45, 0.00s elapsed
+Initiating NSE at 12:45
+Completed NSE at 12:45, 0.00s elapsed
+Initiating NSE at 12:45
+Completed NSE at 12:45, 0.00s elapsed
+Read data files from: C:\Program Files (x86)\Nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 182.65 seconds
+           Raw packets sent: 1073 (50.648KB) | Rcvd: 1081 (45.511KB)
+</output><host comment=""><status state="up"></status><address addr="90.175.129.23" vendor="" addrtype="ipv4"></address><hostnames><hostname name="ssh.mier.info" type="user"></hostname><hostname name="23.pool90-175-129.dynamic.orange.es" type="PTR"></hostname></hostnames><ports><extraports count="995" state="closed"></extraports><port portid="80" protocol="tcp"><state state="open" reason="syn-ack" reason_ttl="63"></state><service conf="10" method="probed" name="http" product="nginx" version="1.24.0"></service></port><port portid="443" protocol="tcp"><state state="open" reason="syn-ack" reason_ttl="63"></state><service conf="10" method="probed" name="http" product="nginx" version="1.24.0"></service></port><port portid="6969" protocol="tcp"><state state="open" reason="syn-ack" reason_ttl="64"></state><service conf="8" method="probed" name="tcpwrapped"></service></port><port portid="8080" protocol="tcp"><state state="filtered" reason="no-response" reason_ttl="0"></state><service conf="3" method="table" name="http-proxy"></service></port><port portid="9090" protocol="tcp"><state state="open" reason="syn-ack" reason_ttl="63"></state><service conf="3" method="table" name="zeus-admin"></service></port></ports><os><portused state="open" proto="tcp" portid="80"></portused><portused state="closed" proto="tcp" portid="1"></portused><osmatch name="Linux 5.0 - 5.4" accuracy="93" line="68121"><osclass vendor="Linux" osfamily="Linux" type="general purpose" osgen="5.X" accuracy="93"></osclass></osmatch><osmatch name="Linux 5.1" accuracy="93" line="68139"><osclass vendor="Linux" osfamily="Linux" type="general purpose" osgen="5.X" accuracy="93"></osclass></osmatch><osmatch name="Linux 2.6.32 - 3.13" accuracy="93" line="56610"><osclass vendor="Linux" osfamily="Linux" type="general purpose" osgen="3.X" accuracy="93"></osclass></osmatch><osmatch name="Linux 2.6.39" accuracy="93" line="58199"><osclass vendor="Linux" osfamily="Linux" type="general purpose" osgen="2.6.X" accuracy="93"></osclass></osmatch><osmatch name="Linux 2.6.22 - 2.6.36" accuracy="91" line="51885"><osclass vendor="Linux" osfamily="Linux" type="general purpose" osgen="2.6.X" accuracy="91"></osclass></osmatch><osmatch name="Linux 3.10 - 4.11" accuracy="91" line="63448"><osclass vendor="Linux" osfamily="Linux" type="general purpose" osgen="4.X" accuracy="91"></osclass></osmatch><osmatch name="Linux 3.10" accuracy="91" line="63038"><osclass vendor="Linux" osfamily="Linux" type="general purpose" osgen="3.X" accuracy="91"></osclass></osmatch><osmatch name="Linux 2.6.32" accuracy="90" line="55372"><osclass vendor="Linux" osfamily="Linux" type="general purpose" osgen="2.6.X" accuracy="90"></osclass></osmatch><osmatch name="Linux 3.2 - 4.9" accuracy="90" line="65323"><osclass vendor="Linux" osfamily="Linux" type="general purpose" osgen="4.X" accuracy="90"></osclass></osmatch><osmatch name="Linux 4.15 - 5.8" accuracy="90" line="67250"><osclass vendor="Linux" osfamily="Linux" type="general purpose" osgen="5.X" accuracy="90"></osclass></osmatch></os><uptime seconds="740284" lastboot="Thu Nov 30 23:07:07 2023"></uptime><tcpsequence index="259" difficulty="Good luck!" values="DAB27B29,5EED4A98,FEA9202B,31079B18,FE0185E2,DB7D15AC"></tcpsequence><ipidsequence class="All zeros" values="0,0,0,0,0,0"></ipidsequence><tcptssequence class="other" values="BAC50472,BAC504F2,BAC50532,BAC4FDB2,BAC4FE32,BAC4FE72"></tcptssequence><trace proto="tcp" port="110"><hop ttl="1" rtt="424.00" ipaddr="90.175.129.23" host="23.pool90-175-129.dynamic.orange.es"></hop></trace></host><runstats><finished time="1702122311" timestr="Sat Dec  9 12:45:11 2023"></finished><hosts up="1" down="0" total="1"></hosts></runstats></nmaprun>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<?xml-stylesheet href="file:///C:/Program Files (x86)/Nmap/nmap.xsl" type="text/xsl"?><nmaprun args="nmap -sU -p U:1-512 -T3 ssh.mier.info" profile_name="" scanner="nmap" start="1702123487" startstr="Sat Dec  9 13:04:47 2023" version="7.94" xmloutputversion="1.04"><scaninfo type="udp" protocol="udp" numservices="512" services="1-512"></scaninfo><verbose level="0"></verbose><debugging level="0"></debugging><output type="interactive">Starting Nmap 7.94 ( https://nmap.org ) at 2023-12-09 13:04 Hora estándar romance
+Nmap scan report for ssh.mier.info (90.175.129.23)
+Host is up (0.11s latency).
+rDNS record for 90.175.129.23: 23.pool90-175-129.dynamic.orange.es
+Not shown: 508 closed udp ports (port-unreach)
+PORT    STATE         SERVICE
+67/udp  open|filtered dhcps
+68/udp  open|filtered dhcpc
+137/udp open|filtered netbios-ns
+138/udp open|filtered netbios-dgm
+
+Nmap done: 1 IP address (1 host up) scanned in 565.40 seconds
+</output><host comment=""><status state="up"></status><address addr="90.175.129.23" vendor="" addrtype="ipv4"></address><hostnames><hostname name="ssh.mier.info" type="user"></hostname><hostname name="23.pool90-175-129.dynamic.orange.es" type="PTR"></hostname></hostnames><ports><extraports count="508" state="closed"></extraports><port portid="67" protocol="udp"><state state="open|filtered" reason="no-response" reason_ttl="0"></state><service conf="3" method="table" name="dhcps"></service></port><port portid="68" protocol="udp"><state state="open|filtered" reason="no-response" reason_ttl="0"></state><service conf="3" method="table" name="dhcpc"></service></port><port portid="137" protocol="udp"><state state="open|filtered" reason="no-response" reason_ttl="0"></state><service conf="3" method="table" name="netbios-ns"></service></port><port portid="138" protocol="udp"><state state="open|filtered" reason="no-response" reason_ttl="0"></state><service conf="3" method="table" name="netbios-dgm"></service></port></ports><os></os><uptime seconds="" lastboot=""></uptime><tcpsequence index="" difficulty="" values=""></tcpsequence><ipidsequence class="" values=""></ipidsequence><tcptssequence class="" values=""></tcptssequence></host><runstats><finished time="1702124052" timestr="Sat Dec  9 13:14:12 2023"></finished><hosts up="1" down="0" total="1"></hosts></runstats></nmaprun>

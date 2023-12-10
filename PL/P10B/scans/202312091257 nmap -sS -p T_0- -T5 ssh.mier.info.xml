@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<?xml-stylesheet href="file:///C:/Program Files (x86)/Nmap/nmap.xsl" type="text/xsl"?><nmaprun args="nmap -sS -p T:0- -T5 ssh.mier.info" profile_name="" scanner="nmap" start="1702123075" startstr="Sat Dec  9 12:57:55 2023" version="7.94" xmloutputversion="1.04"><scaninfo type="syn" protocol="tcp" numservices="65536" services="0-65535"></scaninfo><verbose level="0"></verbose><debugging level="0"></debugging><output type="interactive">Starting Nmap 7.94 ( https://nmap.org ) at 2023-12-09 12:57 Hora estándar romance
+Nmap scan report for ssh.mier.info (90.175.129.23)
+Host is up (0.0041s latency).
+rDNS record for 90.175.129.23: 23.pool90-175-129.dynamic.orange.es
+Not shown: 65517 closed tcp ports (reset)
+PORT      STATE    SERVICE
+80/tcp    open     http
+443/tcp   open     https
+2606/tcp  open     netmon
+4230/tcp  filtered vrml-multi-use
+6520/tcp  open     unknown
+6969/tcp  open     acmsoda
+8080/tcp  filtered http-proxy
+8384/tcp  open     marathontp
+9090/tcp  open     zeus-admin
+9600/tcp  filtered micromuse-ncpw
+20208/tcp open     unknown
+20998/tcp open     unknown
+25565/tcp filtered minecraft
+40663/tcp open     unknown
+41825/tcp open     unknown
+46915/tcp open     unknown
+50805/tcp open     unknown
+56029/tcp open     unknown
+58216/tcp open     unknown
+
+Nmap done: 1 IP address (1 host up) scanned in 23.39 seconds
+</output><host comment=""><status state="up"></status><address addr="90.175.129.23" vendor="" addrtype="ipv4"></address><hostnames><hostname name="ssh.mier.info" type="user"></hostname><hostname name="23.pool90-175-129.dynamic.orange.es" type="PTR"></hostname></hostnames><ports><extraports count="65517" state="closed"></extraports><port portid="80" protocol="tcp"><state state="open" reason="syn-ack" reason_ttl="63"></state><service conf="3" method="table" name="http"></service></port><port portid="443" protocol="tcp"><state state="open" reason="syn-ack" reason_ttl="63"></state><service conf="3" method="table" name="https"></service></port><port portid="2606" protocol="tcp"><state state="open" reason="syn-ack" reason_ttl="63"></state><service conf="3" method="table" name="netmon"></service></port><port portid="4230" protocol="tcp"><state state="filtered" reason="no-response" reason_ttl="0"></state><service conf="3" method="table" name="vrml-multi-use"></service></port><port portid="6520" protocol="tcp"><state state="open" reason="syn-ack" reason_ttl="63"></state><service></service></port><port portid="6969" protocol="tcp"><state state="open" reason="syn-ack" reason_ttl="64"></state><service conf="3" method="table" name="acmsoda"></service></port><port portid="8080" protocol="tcp"><state state="filtered" reason="no-response" reason_ttl="0"></state><service conf="3" method="table" name="http-proxy"></service></port><port portid="8384" protocol="tcp"><state state="open" reason="syn-ack" reason_ttl="63"></state><service conf="3" method="table" name="marathontp"></service></port><port portid="9090" protocol="tcp"><state state="open" reason="syn-ack" reason_ttl="63"></state><service conf="3" method="table" name="zeus-admin"></service></port><port portid="9600" protocol="tcp"><state state="filtered" reason="no-response" reason_ttl="0"></state><service conf="3" method="table" name="micromuse-ncpw"></service></port><port portid="20208" protocol="tcp"><state state="open" reason="syn-ack" reason_ttl="63"></state><service></service></port><port portid="20998" protocol="tcp"><state state="open" reason="syn-ack" reason_ttl="63"></state><service></service></port><port portid="25565" protocol="tcp"><state state="filtered" reason="no-response" reason_ttl="0"></state><service conf="3" method="table" name="minecraft"></service></port><port portid="40663" protocol="tcp"><state state="open" reason="syn-ack" reason_ttl="63"></state><service></service></port><port portid="41825" protocol="tcp"><state state="open" reason="syn-ack" reason_ttl="63"></state><service></service></port><port portid="46915" protocol="tcp"><state state="open" reason="syn-ack" reason_ttl="63"></state><service></service></port><port portid="50805" protocol="tcp"><state state="open" reason="syn-ack" reason_ttl="64"></state><service></service></port><port portid="56029" protocol="tcp"><state state="open" reason="syn-ack" reason_ttl="64"></state><service></service></port><port portid="58216" protocol="tcp"><state state="open" reason="syn-ack" reason_ttl="63"></state><service></service></port></ports><os></os><uptime seconds="" lastboot=""></uptime><tcpsequence index="" difficulty="" values=""></tcpsequence><ipidsequence class="" values=""></ipidsequence><tcptssequence class="" values=""></tcptssequence></host><runstats><finished time="1702123098" timestr="Sat Dec  9 12:58:18 2023"></finished><hosts up="1" down="0" total="1"></hosts></runstats></nmaprun>

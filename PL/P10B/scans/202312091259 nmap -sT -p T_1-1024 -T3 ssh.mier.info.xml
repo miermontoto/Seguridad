@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<?xml-stylesheet href="file:///C:/Program Files (x86)/Nmap/nmap.xsl" type="text/xsl"?><nmaprun args="nmap -sT -p T:1-1024 -T3 ssh.mier.info" profile_name="" scanner="nmap" start="1702123153" startstr="Sat Dec  9 12:59:13 2023" version="7.94" xmloutputversion="1.04"><scaninfo type="connect" protocol="tcp" numservices="1024" services="1-1024"></scaninfo><verbose level="0"></verbose><debugging level="0"></debugging><output type="interactive">Starting Nmap 7.94 ( https://nmap.org ) at 2023-12-09 12:59 Hora estándar romance
+Nmap scan report for ssh.mier.info (90.175.129.23)
+Host is up (0.0038s latency).
+rDNS record for 90.175.129.23: 23.pool90-175-129.dynamic.orange.es
+Not shown: 1022 filtered tcp ports (no-response)
+PORT    STATE SERVICE
+80/tcp  open  http
+443/tcp open  https
+
+Nmap done: 1 IP address (1 host up) scanned in 18.76 seconds
+</output><host comment=""><status state="up"></status><address addr="90.175.129.23" vendor="" addrtype="ipv4"></address><hostnames><hostname name="ssh.mier.info" type="user"></hostname><hostname name="23.pool90-175-129.dynamic.orange.es" type="PTR"></hostname></hostnames><ports><extraports count="1022" state="filtered"></extraports><port portid="80" protocol="tcp"><state state="open" reason="syn-ack" reason_ttl="0"></state><service conf="3" method="table" name="http"></service></port><port portid="443" protocol="tcp"><state state="open" reason="syn-ack" reason_ttl="0"></state><service conf="3" method="table" name="https"></service></port></ports><os></os><uptime seconds="" lastboot=""></uptime><tcpsequence index="" difficulty="" values=""></tcpsequence><ipidsequence class="" values=""></ipidsequence><tcptssequence class="" values=""></tcptssequence></host><runstats><finished time="1702123172" timestr="Sat Dec  9 12:59:32 2023"></finished><hosts up="1" down="0" total="1"></hosts></runstats></nmaprun>
