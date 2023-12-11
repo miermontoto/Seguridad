@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<Almacen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Lista>
+    <Usuario>
+      <Nombre>Antonio</Nombre>
+      <Salt>1NNWLEzUSoY/qsLHb/4Erw==</Salt>
+      <ResuContra>tQ86IZfenx99etjbcqsUm54rthcQVEapn+ci54jzSgw=</ResuContra>
+    </Usuario>
+    <Usuario>
+      <Nombre>Benito</Nombre>
+      <Salt>+26OqWhKrj2bL7Sb2EM6Iw==</Salt>
+      <ResuContra>d9ow1XAiahcqGdXtOZUm/elbEoDzanYwpb/xqbVa+Es=</ResuContra>
+    </Usuario>
+    <Usuario>
+      <Nombre>Carlos</Nombre>
+      <Salt>fbpGkqMmXt6j8+5MfRXAJw==</Salt>
+      <ResuContra>cWtCPMW9b1KfXekmcA1vLC2WatZVuygYY9NYdi1kdfs=</ResuContra>
+    </Usuario>
+    <Usuario>
+      <Nombre>David</Nombre>
+      <Salt>x05f8ihhQO/XT/WpgE+vKw==</Salt>
+      <ResuContra>xI7OIt9NPTANr7VF8u3l1U2h8k7FB0G5Cl5RWCcSADA=</ResuContra>
+    </Usuario>
+    <Usuario>
+      <Nombre>Eduardo</Nombre>
+      <Salt>/Ibp2qk/f2iUnbZL3Zgy2g==</Salt>
+      <ResuContra>6QiZU2gR9Mt8aMkxv2eQigCG/X7mrU5V7FtyJ4DzT3M=</ResuContra>
+    </Usuario>
+  </Lista>
+</Almacen>
